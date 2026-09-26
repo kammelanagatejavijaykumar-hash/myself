@@ -1,0 +1,1149 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Vijay 🎂</title>
+
+<style>
+
+/* =========================
+   BASIC RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    font-family: 'Poppins', Arial, sans-serif;
+
+    color: white;
+
+    background:
+        radial-gradient(circle at 20% 20%, #4c1d95 0%, transparent 30%),
+        radial-gradient(circle at 80% 80%, #be185d 0%, transparent 30%),
+        linear-gradient(135deg, #05000d, #12001f, #05000d);
+}
+
+
+/* =========================
+   GOOGLE FONTS
+========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+
+/* =========================
+   STARS
+========================= */
+
+.stars {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.star {
+    position: absolute;
+
+    width: 3px;
+    height: 3px;
+
+    background: white;
+    border-radius: 50%;
+
+    box-shadow: 0 0 12px white;
+
+    animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+
+    0% {
+        opacity: 0.2;
+        transform: scale(0.5);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1.5);
+    }
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container {
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 15px;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================
+   PREMIUM CARD
+========================= */
+
+.card {
+
+    width: min(900px, 96%);
+
+    padding: 60px 35px;
+
+    text-align: center;
+
+    border-radius: 35px;
+
+    background: rgba(255,255,255,0.08);
+
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+
+    border: 1px solid rgba(255,255,255,0.18);
+
+    box-shadow:
+        0 0 50px rgba(255,0,170,0.18),
+        inset 0 0 30px rgba(255,255,255,0.04);
+
+    animation: cardEntrance 1.5s ease;
+}
+
+@keyframes cardEntrance {
+
+    from {
+        opacity: 0;
+        transform: translateY(60px) scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* =========================
+   HEADINGS
+========================= */
+
+.subtitle {
+
+    font-size: 14px;
+
+    letter-spacing: 5px;
+
+    text-transform: uppercase;
+
+    color: #ffb7e8;
+
+    margin-bottom: 20px;
+}
+
+h1 {
+
+    font-family: 'Cinzel', serif;
+
+    font-size: clamp(42px, 8vw, 82px);
+
+    line-height: 1.1;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff,
+            #ff7bd5,
+            #c084fc,
+            #ffffff
+        );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    animation: titleGlow 3s infinite alternate;
+}
+
+@keyframes titleGlow {
+
+    from {
+        filter: drop-shadow(0 0 5px #ff4fc4);
+    }
+
+    to {
+        filter: drop-shadow(0 0 25px #ff4fc4);
+    }
+}
+
+
+.name {
+
+    margin-top: 12px;
+
+    font-family: 'Cinzel', serif;
+
+    font-size: clamp(35px, 7vw, 65px);
+
+    color: white;
+
+    text-shadow:
+        0 0 10px #ff55c8,
+        0 0 30px #ff55c8;
+}
+
+
+/* =========================
+   DIVIDER
+========================= */
+
+.divider {
+
+    width: 150px;
+    height: 2px;
+
+    margin: 30px auto;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #ff5fc8,
+            transparent
+        );
+}
+
+
+/* =========================
+   CAKE
+========================= */
+
+.cake {
+
+    position: relative;
+
+    width: 220px;
+    height: 180px;
+
+    margin: 30px auto 15px;
+}
+
+
+/* Cake base */
+
+.cake-body {
+
+    position: absolute;
+
+    bottom: 10px;
+    left: 20px;
+
+    width: 180px;
+    height: 85px;
+
+    border-radius:
+        15px
+        15px
+        25px
+        25px;
+
+    background:
+        linear-gradient(
+            #ff9bdd,
+            #bd287e
+        );
+
+    box-shadow:
+        0 15px 30px rgba(255,40,170,0.4);
+}
+
+
+/* Cake top */
+
+.cake-top {
+
+    position: absolute;
+
+    top: 70px;
+    left: 20px;
+
+    width: 180px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    background: #ffb9e7;
+}
+
+
+/* Cream */
+
+.cream {
+
+    position: absolute;
+
+    top: 92px;
+    left: 35px;
+
+    width: 150px;
+    height: 25px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    box-shadow: 0 3px 10px rgba(255,255,255,0.5);
+}
+
+
+/* =========================
+   CANDLES
+========================= */
+
+.candle {
+
+    position: absolute;
+
+    top: 25px;
+
+    width: 14px;
+    height: 55px;
+
+    border-radius: 7px;
+
+    background:
+        repeating-linear-gradient(
+            45deg,
+            #ffffff 0px,
+            #ffffff 6px,
+            #ff5ebd 6px,
+            #ff5ebd 12px
+        );
+
+    box-shadow:
+        0 0 10px rgba(255,255,255,0.4);
+
+    z-index: 5;
+}
+
+.candle:nth-child(1) {
+    left: 75px;
+}
+
+.candle:nth-child(2) {
+    left: 103px;
+}
+
+.candle:nth-child(3) {
+    left: 131px;
+}
+
+
+/* =========================
+   FLAME
+========================= */
+
+.flame {
+
+    position: absolute;
+
+    width: 18px;
+    height: 25px;
+
+    top: -24px;
+    left: -2px;
+
+    border-radius:
+        50%
+        50%
+        50%
+        0;
+
+    transform: rotate(-45deg);
+
+    background:
+        linear-gradient(
+            #fff700,
+            #ff7b00
+        );
+
+    box-shadow:
+        0 0 10px #ffbb00,
+        0 0 25px #ff7900;
+
+    animation:
+        flameMove 0.5s infinite alternate;
+}
+
+@keyframes flameMove {
+
+    from {
+        transform:
+            rotate(-45deg)
+            scale(0.85);
+    }
+
+    to {
+        transform:
+            rotate(-45deg)
+            scale(1.15);
+    }
+}
+
+
+/* =========================
+   CANDLE CONTROL
+========================= */
+
+.candle-control {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+
+    margin-top: 20px;
+}
+
+.control-btn {
+
+    padding: 12px 25px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    color: white;
+
+    font-family: Poppins, sans-serif;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff3fae,
+            #7c3aed
+        );
+
+    box-shadow:
+        0 8px 25px rgba(255,50,180,0.3);
+
+    transition: 0.3s;
+}
+
+.control-btn:hover {
+
+    transform:
+        translateY(-4px)
+        scale(1.03);
+
+    box-shadow:
+        0 12px 35px rgba(255,50,180,0.5);
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+.message {
+
+    max-width: 720px;
+
+    margin: 25px auto;
+
+    font-size: 18px;
+
+    line-height: 1.9;
+
+    color: #f6dff1;
+}
+
+.highlight {
+
+    color: #ff8bd8;
+
+    font-weight: 600;
+
+    text-shadow:
+        0 0 10px rgba(255,100,200,0.5);
+}
+
+
+/* =========================
+   QUOTE
+========================= */
+
+.quote {
+
+    max-width: 650px;
+
+    margin: 30px auto;
+
+    padding: 22px;
+
+    border-left: 3px solid #ff5fc5;
+    border-right: 3px solid #ff5fc5;
+
+    color: #ffd8ef;
+
+    font-style: italic;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.main-btn {
+
+    margin-top: 20px;
+
+    padding: 16px 35px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff3cae,
+            #7c3aed
+        );
+
+    box-shadow:
+        0 10px 35px rgba(255,40,170,0.4);
+
+    transition: 0.3s;
+}
+
+.main-btn:hover {
+
+    transform:
+        translateY(-5px)
+        scale(1.05);
+
+    box-shadow:
+        0 15px 45px rgba(255,40,170,0.65);
+}
+
+
+/* =========================
+   SURPRISE
+========================= */
+
+#surprise {
+
+    display: none;
+
+    margin-top: 35px;
+
+    padding: 30px;
+
+    border-radius: 25px;
+
+    background:
+        rgba(255,255,255,0.07);
+
+    border:
+        1px solid rgba(255,255,255,0.15);
+
+    animation:
+        surpriseIn 0.8s ease;
+}
+
+@keyframes surpriseIn {
+
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#surprise h2 {
+
+    font-family: Cinzel, serif;
+
+    color: #ffd2ed;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.heart {
+
+    position: fixed;
+
+    bottom: -40px;
+
+    pointer-events: none;
+
+    z-index: 10;
+
+    animation:
+        heartFloat linear forwards;
+}
+
+@keyframes heartFloat {
+
+    from {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 1;
+    }
+
+    to {
+
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   CONFETTI
+========================= */
+
+.confetti {
+
+    position: fixed;
+
+    width: 8px;
+    height: 14px;
+
+    top: -20px;
+
+    z-index: 20;
+
+    pointer-events: none;
+
+    animation:
+        confettiFall linear forwards;
+}
+
+@keyframes confettiFall {
+
+    to {
+
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+
+    margin-top: 35px;
+
+    color: #c9a8c3;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:600px) {
+
+    .card {
+
+        padding: 45px 18px;
+    }
+
+    .message {
+
+        font-size: 15px;
+    }
+
+    .quote {
+
+        font-size: 14px;
+    }
+
+    .cake {
+
+        transform: scale(0.85);
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     STARS
+========================= -->
+
+<div class="stars">
+
+    <span class="star" style="left:5%;top:10%;"></span>
+    <span class="star" style="left:15%;top:35%;"></span>
+    <span class="star" style="left:25%;top:20%;"></span>
+    <span class="star" style="left:35%;top:70%;"></span>
+    <span class="star" style="left:45%;top:15%;"></span>
+    <span class="star" style="left:55%;top:50%;"></span>
+    <span class="star" style="left:65%;top:25%;"></span>
+    <span class="star" style="left:75%;top:75%;"></span>
+    <span class="star" style="left:85%;top:15%;"></span>
+    <span class="star" style="left:95%;top:45%;"></span>
+
+</div>
+
+
+<!-- =========================
+     MAIN
+========================= -->
+
+<div class="container">
+
+<section class="card">
+
+
+<div class="subtitle">
+A Special Day • A Special Friend
+</div>
+
+
+<h1>
+Happy Birthday
+</h1>
+
+
+<div class="name">
+Vijay
+</div>
+
+
+<div class="divider"></div>
+
+
+<!-- =========================
+     CAKE
+========================= -->
+
+<div class="cake">
+
+
+    <!-- Candle 1 -->
+    <div class="candle">
+
+        <div class="flame"></div>
+
+    </div>
+
+
+    <!-- Candle 2 -->
+    <div class="candle">
+
+        <div class="flame"></div>
+
+    </div>
+
+
+    <!-- Candle 3 -->
+    <div class="candle">
+
+        <div class="flame"></div>
+
+    </div>
+
+
+    <div class="cake-top"></div>
+
+    <div class="cream"></div>
+
+    <div class="cake-body"></div>
+
+</div>
+
+
+<!-- =========================
+     CANDLE CONTROLS
+========================= -->
+
+<div class="candle-control">
+
+    <button
+        class="control-btn"
+        onclick="candlesOn()">
+
+        🔥 Candles ON
+
+    </button>
+
+
+    <button
+        class="control-btn"
+        onclick="candlesOff()">
+
+        🕯️ Candles OFF
+
+    </button>
+
+</div>
+
+
+<!-- =========================
+     WISH
+========================= -->
+
+<p class="message">
+
+Today is more than just another day...
+
+It's the day a truly special person came
+into this world.
+
+<strong class="highlight">
+Happy Birthday, Vijay! 🎂
+</strong>
+
+</p>
+
+
+<div class="quote">
+
+"May your new year of life be filled with
+beautiful memories, exciting adventures,
+success in everything you do, and countless
+reasons to smile."
+
+</div>
+
+
+<p class="message">
+
+You are not just a friend.
+You are someone who makes ordinary moments
+feel special and unforgettable.
+
+May your dreams become goals,
+your goals become achievements,
+and your achievements become memories
+you'll always be proud of.
+
+<strong class="highlight">
+Keep smiling. Keep shining. Keep being you. 💫
+</strong>
+
+</p>
+
+
+<!-- =========================
+     SURPRISE BUTTON
+========================= -->
+
+<button
+    class="main-btn"
+    onclick="showSurprise()">
+
+🎁 Open Your Birthday Surprise
+
+</button>
+
+
+<!-- =========================
+     SURPRISE MESSAGE
+========================= -->
+
+<div id="surprise">
+
+<h2>
+✨ A Special Message For Vijay ✨
+</h2>
+
+<p class="message">
+
+No matter where life takes you,
+I hope you always have people around you
+who make you laugh, support your dreams,
+and celebrate your victories.
+
+Here's to another year of
+friendship, happiness, adventures
+and unforgettable memories.
+
+<strong class="highlight">
+Happy Birthday, Vijay! ❤️
+</strong>
+
+</p>
+
+<div style="font-size:45px;">
+🎂 🎉 🎁 🎈 💖 ✨
+</div>
+
+</div>
+
+
+<div class="footer">
+
+Made with ❤️ especially for Vijay
+
+</div>
+
+
+</section>
+
+</div>
+
+
+<script>
+
+
+/* =========================
+   CANDLE ON
+========================= */
+
+function candlesOn() {
+
+    const flames =
+        document.querySelectorAll(".flame");
+
+    flames.forEach(function(flame) {
+
+        flame.style.display = "block";
+
+    });
+
+}
+
+
+/* =========================
+   CANDLE OFF
+========================= */
+
+function candlesOff() {
+
+    const flames =
+        document.querySelectorAll(".flame");
+
+    flames.forEach(function(flame) {
+
+        flame.style.display = "none";
+
+    });
+
+}
+
+
+/* =========================
+   SURPRISE
+========================= */
+
+function showSurprise() {
+
+    document.getElementById("surprise").style.display = "block";
+
+    createHearts();
+
+    createConfetti();
+
+    document.getElementById("surprise")
+        .scrollIntoView({
+            behavior: "smooth"
+        });
+
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+function createHearts() {
+
+    for(let i = 0; i < 30; i++) {
+
+        const heart =
+            document.createElement("div");
+
+        heart.className = "heart";
+
+        const icons = [
+            "💖",
+            "💕",
+            "💗",
+            "💝",
+            "✨",
+            "❤️"
+        ];
+
+        heart.innerHTML =
+            icons[
+                Math.floor(
+                    Math.random() * icons.length
+                )
+            ];
+
+        heart.style.left =
+            Math.random() * 100 + "vw";
+
+        heart.style.fontSize =
+            (15 + Math.random() * 25) + "px";
+
+        heart.style.animationDuration =
+            (3 + Math.random() * 5) + "s";
+
+        document.body.appendChild(heart);
+
+
+        setTimeout(function() {
+
+            heart.remove();
+
+        }, 9000);
+
+    }
+
+}
+
+
+/* =========================
+   CONFETTI
+========================= */
+
+function createConfetti() {
+
+    for(let i = 0; i < 120; i++) {
+
+        const piece =
+            document.createElement("div");
+
+        piece.className = "confetti";
+
+        piece.style.left =
+            Math.random() * 100 + "vw";
+
+        piece.style.background =
+            `hsl(${Math.random() * 360}, 100%, 65%)`;
+
+        piece.style.animationDuration =
+            (2 + Math.random() * 4) + "s";
+
+        piece.style.animationDelay =
+            Math.random() * 2 + "s";
+
+        document.body.appendChild(piece);
+
+
+        setTimeout(function() {
+
+            piece.remove();
+
+        }, 7000);
+
+    }
+
+}
+
+
+/* =========================
+   AUTOMATIC HEARTS
+========================= */
+
+setInterval(function() {
+
+    const heart =
+        document.createElement("div");
+
+    heart.className = "heart";
+
+    heart.innerHTML =
+        Math.random() > 0.5
+        ? "💖"
+        : "✨";
+
+    heart.style.left =
+        Math.random() * 100 + "vw";
+
+    heart.style.fontSize =
+        (15 + Math.random() * 20) + "px";
+
+    heart.style.animationDuration =
+        (5 + Math.random() * 5) + "s";
+
+    document.body.appendChild(heart);
+
+
+    setTimeout(function() {
+
+        heart.remove();
+
+    }, 10000);
+
+}, 1000);
+
+
+</script>
+
+
+</body>
+</html>
+```
